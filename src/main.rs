@@ -4,6 +4,7 @@
 mod binary_tree;
 mod binary_tree_serialize;
 mod inorder_iterator;
+mod bst_insert;
 
 fn main() {
     // excercism::test()
@@ -13,5 +14,7 @@ fn main() {
 
     // binary_tree_serialize::tests::test();
 
-    inorder_iterator::tests::test();
+    // inorder_iterator::tests::test();
+
+    bst_insert::tests::test();
 }
