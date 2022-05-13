@@ -10,12 +10,13 @@ impl Solution {
     pub fn insert_into_bst(root: Option<Rc<RefCell<TreeNode>>>, val: i32) -> Option<Rc<RefCell<TreeNode>>> {
         let mut node = root.clone();
         while let Some(nd) = node.clone() {
-            match val.cmp(&nd.borrow().val) {
+            match { let x = val.cmp(&nd.borrow().val); x } {
                 Ordering::Less => {
                     if nd.borrow().left.is_some() {
                         node = nd.borrow().left.clone();
                     } else {
                         nd.borrow_mut().left.replace(Rc::new(RefCell::new(TreeNode::new(val))));
+                        break;
                     }
                 }
                 Ordering::Greater => {
@@ -23,12 +24,17 @@ impl Solution {
                         node = nd.borrow().right.clone();
                     } else {
                         nd.borrow_mut().right.replace(Rc::new(RefCell::new(TreeNode::new(val))));
+                        break;
                     }
                 }
                 _ => unreachable!()
             }
         }
-        root
+        if root.is_some() {
+            root
+        } else {
+            Some(Rc::new(RefCell::new(TreeNode::new(val))))
+        }
     }
 }
 
