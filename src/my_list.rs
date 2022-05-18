@@ -19,7 +19,7 @@ impl fmt::Display for ListNode {
                 write!(f, "{},", self.data);
                 node.fmt(f)
             }
-            None => write!(f, "{}", self.data)
+            None => write!(f, "{}", self.data),
         }
     }
 }
@@ -33,9 +33,9 @@ fn create_list(array: &[i32]) -> Option<Box<ListNode>> {
 
         for &v in array.iter().skip(1) {
             let next_node = ListNode::new(v);
-            curr_node.next = Some(Box::new(next_node)); 
+            curr_node.next = Some(Box::new(next_node));
             curr_node = curr_node.next.as_mut().unwrap();
-        } 
+        }
 
         Some(Box::new(head))
     }
@@ -49,14 +49,14 @@ pub fn test() {
     let mut i = 1;
 
     while let Some(node) = curr_node.as_mut() {
-    // while curr_node.is_some() {
+        // while curr_node.is_some() {
         if i == n {
             break;
-        } 
+        }
         curr_node = &mut node.next;
         // curr_node = &mut curr_node.as_mut().unwrap().next;
         i += 1;
     }
-   
+
     // let head = curr_node.as_mut().unwrap();
 }

@@ -1,10 +1,15 @@
 // mod excercism;
-// mod list;
-// mod my_list;
 mod binary_tree;
 mod binary_tree_serialize;
-mod inorder_iterator;
 mod bst_insert;
+mod inorder_iterator;
+mod list;
+mod list_design;
+mod my_list;
+
+struct X {
+    x: i32,
+}
 
 fn main() {
     // excercism::test()
@@ -16,5 +21,7 @@ fn main() {
 
     // inorder_iterator::tests::test();
 
-    bst_insert::tests::test();
+    // bst_insert::tests::test();
+
+    list_design::tests::test();
 }

@@ -17,7 +17,7 @@ impl BSTIterator {
     fn new(root: Option<Rc<RefCell<TreeNode>>>) -> Self {
         Self {
             q: VecDeque::default(),
-            right: root
+            right: root,
         }
     }
 
