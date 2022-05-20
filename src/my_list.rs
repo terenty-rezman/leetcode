@@ -1,9 +1,9 @@
 use std::fmt;
 
 #[derive(Debug)]
-struct ListNode {
-    data: i32,
-    next: Option<Box<ListNode>>,
+pub struct ListNode {
+    pub data: i32,
+    pub next: Option<Box<ListNode>>,
 }
 
 impl ListNode {
@@ -24,7 +24,7 @@ impl fmt::Display for ListNode {
     }
 }
 
-fn create_list(array: &[i32]) -> Option<Box<ListNode>> {
+pub fn create_list(array: &[i32]) -> Option<Box<ListNode>> {
     if array.is_empty() {
         None
     } else {

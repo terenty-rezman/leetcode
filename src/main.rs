@@ -6,6 +6,7 @@ mod inorder_iterator;
 mod list;
 mod list_design;
 mod my_list;
+mod reverse_list;
 
 struct X {
     x: i32,
@@ -23,5 +24,7 @@ fn main() {
 
     // bst_insert::tests::test();
 
-    list_design::tests::test();
+    // list_design::tests::test();
+
+    reverse_list::tests::test();
 }

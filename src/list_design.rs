@@ -18,19 +18,26 @@ impl MyLinkedList {
 
     fn get(&self, index: i32) -> i32 {
         let mut count = index;
-        let mut node: &Node = self.head.as_ref().unwrap();
+        let mut node = &self.head;
 
-        while count > 0 {
-            node = node.next.as_ref().unwrap();
+        while node.is_some() {
+            if count <= 0 {
+                break;
+            }
+            node = &node.as_ref().unwrap().next;
             count -= 1;
         }
 
-        node.val
+        if node.is_some() && count == 0 {
+            node.as_ref().unwrap().val
+        } else {
+            -1
+        }
     }
 
     fn add_at_head(&mut self, val: i32) {
         let new_node = Node {
-            val: val,
+            val,
             next: self.head.take(),
         };
 
@@ -44,36 +51,48 @@ impl MyLinkedList {
         }
 
         node.replace(Box::new(Node {
-            val: val,
+            val,
             next: None,
         }));
     }
 
     fn add_at_index(&mut self, index: i32, val: i32) {
-        let mut node = &mut self.head; 
+        let mut node = &mut self.head;
         let mut count = index;
-        while count > 0 {
+
+        while node.is_some() {
+            if count <= 0 {
+                break;
+            }
             node = &mut node.as_mut().unwrap().next;
             count -= 1;
         }
 
-        let old_node = node.replace(
-            Box::new(Node {val: val, next: None})
-        );
+        if count == 0 {
+            let old_node = node.replace(Box::new(Node {
+                val,
+                next: None,
+            }));
 
-        node.as_mut().unwrap().next = old_node;
+            node.as_mut().unwrap().next = old_node;
+        }
     }
 
     fn delete_at_index(&mut self, index: i32) {
         let mut node = &mut self.head;
         let mut count = index;
-        while count > 0 {
+        while node.is_some() {
+            if count <= 0 {
+                break;
+            }
             node = &mut node.as_mut().unwrap().next;
             count -= 1;
         }
-        
-        let mut next = node.as_mut().unwrap().next.take();
-        std::mem::swap(&mut next, node);
+
+        if count == 0 && node.is_some() {
+            let mut next = node.as_mut().unwrap().next.take();
+            std::mem::swap(&mut next, node);
+        }
     }
 }
 
