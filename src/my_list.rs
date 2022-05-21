@@ -2,13 +2,13 @@ use std::fmt;
 
 #[derive(Debug)]
 pub struct ListNode {
-    pub data: i32,
+    pub val: i32,
     pub next: Option<Box<ListNode>>,
 }
 
 impl ListNode {
-    fn new(data: i32) -> Self {
-        ListNode { data, next: None }
+    fn new(val: i32) -> Self {
+        ListNode { val, next: None }
     }
 }
 
@@ -16,10 +16,10 @@ impl fmt::Display for ListNode {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match &self.next {
             Some(node) => {
-                write!(f, "{},", self.data);
+                write!(f, "{},", self.val);
                 node.fmt(f)
             }
-            None => write!(f, "{}", self.data),
+            None => write!(f, "{}", self.val),
         }
     }
 }

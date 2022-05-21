@@ -7,6 +7,7 @@ mod list;
 mod list_design;
 mod my_list;
 mod reverse_list;
+mod palindrome_list;
 
 struct X {
     x: i32,
@@ -26,5 +27,7 @@ fn main() {
 
     // list_design::tests::test();
 
-    reverse_list::tests::test();
+    // reverse_list::tests::test();
+
+    palindrome_list::tests::test();
 }
