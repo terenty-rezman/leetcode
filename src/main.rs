@@ -8,6 +8,7 @@ mod list_design;
 mod my_list;
 mod reverse_list;
 mod palindrome_list;
+mod binary_search_guess;
 
 struct X {
     x: i32,
@@ -29,5 +30,7 @@ fn main() {
 
     // reverse_list::tests::test();
 
-    palindrome_list::tests::test();
+    // palindrome_list::tests::test();
+
+    binary_search_guess::tests::test();
 }
