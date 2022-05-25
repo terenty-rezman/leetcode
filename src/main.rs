@@ -9,10 +9,7 @@ mod my_list;
 mod reverse_list;
 mod palindrome_list;
 mod binary_search_guess;
-
-struct X {
-    x: i32,
-}
+mod binary_search_rotated;
 
 fn main() {
     // excercism::test()
@@ -32,5 +29,8 @@ fn main() {
 
     // palindrome_list::tests::test();
 
-    binary_search_guess::tests::test();
+    // binary_search_guess::tests::test();
+
+    binary_search_rotated::tests::test();
+
 }
