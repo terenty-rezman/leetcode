@@ -4,11 +4,11 @@ impl Solution {
     pub fn search_range(nums: Vec<i32>, target: i32) -> Vec<i32> {
         let mut l = 0;
         let mut r = nums.len() - 1;
-        
+
         if nums.is_empty() {
             return vec![-1, -1];
         }
-        
+
         while l + 1 < r {
             let m = l + (r - l) / 2;
             if nums[m] <= target {
@@ -48,9 +48,9 @@ impl Solution {
                 -1
             }
         };
-        
+
         vec![start, end]
-       }
+    }
 }
 
 pub mod tests {
@@ -62,5 +62,4 @@ pub mod tests {
         let result = Solution::search_range(input, target);
         dbg!(result);
     }
-
 }

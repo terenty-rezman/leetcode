@@ -5,8 +5,7 @@ fn guess(x: i32) -> i32 {
         1
     } else if x > guessed {
         -1
-    }
-    else {
+    } else {
         0
     }
 }
@@ -17,11 +16,11 @@ impl Solution {
     fn guessNumber(n: i32) -> i32 {
         let mut l: i64 = -1;
         let mut r: i64 = n as i64 + 1;
-        
+
         loop {
             let m = (l + r) / 2;
             let g = guess(m as i32);
-            
+
             if g == 0 {
                 return m as i32;
             } else if g == -1 {

@@ -8,11 +8,11 @@ impl Solution {
         let mut l = 0;
         let mut min_val = 0;
         let mut min_i = 0;
-        
+
         loop {
             let m_i = (l + r) / 2;
             let m_val = nums[m_i];
-            
+
             if nums[l] <= m_val && m_val <= nums[r] {
                 min_val = nums[l];
                 min_i = l;
@@ -29,7 +29,7 @@ impl Solution {
                 }
                 break;
             }
-            
+
             if nums[m_i] < nums[l] {
                 r = m_i;
             } else if nums[m_i] > nums[r] {

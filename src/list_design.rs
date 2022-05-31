@@ -50,10 +50,7 @@ impl MyLinkedList {
             node = &mut node.as_mut().unwrap().next;
         }
 
-        node.replace(Box::new(Node {
-            val,
-            next: None,
-        }));
+        node.replace(Box::new(Node { val, next: None }));
     }
 
     fn add_at_index(&mut self, index: i32, val: i32) {
@@ -69,10 +66,7 @@ impl MyLinkedList {
         }
 
         if count == 0 {
-            let old_node = node.replace(Box::new(Node {
-                val,
-                next: None,
-            }));
+            let old_node = node.replace(Box::new(Node { val, next: None }));
 
             node.as_mut().unwrap().next = old_node;
         }

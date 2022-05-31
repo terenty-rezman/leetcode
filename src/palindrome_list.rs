@@ -11,7 +11,7 @@ impl Solution {
             node_count += 1;
             node = &nd.next;
         }
-        
+
         // find second half ref
         let mut second_half_i = node_count - (node_count / 2);
         let mut node = &mut head;
@@ -19,9 +19,9 @@ impl Solution {
             second_half_i -= 1;
             node = &mut node.as_mut().unwrap().next;
         }
-        
+
         dbg!(second_half_i);
-        
+
         // reverse second half
         let mut reverse_head: Option<Box<ListNode>> = None;
         let mut node = node.take();
@@ -32,7 +32,7 @@ impl Solution {
             reverse_head = new_head;
             node = next;
         }
-        
+
         let mut first = &head;
         let mut second = &reverse_head;
         while second.is_some() {
@@ -42,18 +42,17 @@ impl Solution {
             first = &first.as_ref().unwrap().next;
             second = &second.as_ref().unwrap().next;
         }
-        
+
         true
     }
 }
 
-
 pub mod tests {
-    use crate::my_list::create_list;
     use super::Solution;
+    use crate::my_list::create_list;
 
     pub fn test() {
         let head = create_list(&[1, 2, 2, 1]);
         dbg!(Solution::is_palindrome(head));
-    } 
+    }
 }
