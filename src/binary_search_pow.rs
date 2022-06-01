@@ -20,8 +20,7 @@ impl Solution {
                 let r = Solution::my_pow(x, (n - 1) / 2);
                 return x * r * r;
             }
-        }
-        else {
+        } else {
             if n % 2 == 0 {
                 let r = Solution::my_pow(x, n / 2);
                 return r * r;

@@ -22,7 +22,7 @@ impl Solution {
         let mut i = 1;
         while 0 < num {
             num -= i;
-            i += 2;  
+            i += 2;
         }
         num == 0
     }
