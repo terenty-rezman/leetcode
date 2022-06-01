@@ -12,6 +12,7 @@ mod list_design;
 mod my_list;
 mod palindrome_list;
 mod reverse_list;
+mod binary_search_perfect_square;
 
 fn main() {
     // excercism::test()
@@ -28,5 +29,6 @@ fn main() {
     // binary_search_guess::tests::test();
     // binary_search_rotated::tests::test();
     // binary_search_range::tests::test();
-    binary_search_pow::tests::test();
+    // binary_search_pow::tests::test();
+    binary_search_perfect_square::tests::test();
 }
