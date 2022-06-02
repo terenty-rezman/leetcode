@@ -41,6 +41,14 @@ pub fn create_list(array: &[i32]) -> Option<Box<ListNode>> {
     }
 }
 
+pub fn print_list(head: &Option<Box<ListNode>>) {
+    let mut node = head;
+    while let Some(nd) = node {
+        print!("{} ", nd.val);
+        node = &nd.next;
+    }
+}
+
 pub fn test() {
     let mut head = create_list(&[1, 2, 3]);
 

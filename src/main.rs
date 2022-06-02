@@ -17,6 +17,7 @@ mod palindrome_list;
 mod reverse_list;
 mod two_arrays_intersection;
 mod merge_sort;
+mod insertion_sort_list;
 
 fn main() {
     // excercism::test()
@@ -38,5 +39,6 @@ fn main() {
     // binary_search_smallest_letter::tests::test();
     // binary_search_min_in_rotated::tests::test();
     // two_arrays_intersection::tests::test();
-    merge_sort::tests::test();
+    // merge_sort::tests::test();
+    insertion_sort_list::tests::test();
 }
