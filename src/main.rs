@@ -18,10 +18,9 @@ mod reverse_list;
 mod two_arrays_intersection;
 mod merge_sort;
 mod insertion_sort_list;
+mod sort_colors;
 
 fn main() {
-    // excercism::test()
-
     // let root = binary_tree::from_bfs_array(&[Some(1), None, Some(3)]);
     // dbg!(binary_tree::print_level_order(&root));
 
@@ -40,5 +39,6 @@ fn main() {
     // binary_search_min_in_rotated::tests::test();
     // two_arrays_intersection::tests::test();
     // merge_sort::tests::test();
-    insertion_sort_list::tests::test();
+    // insertion_sort_list::tests::test();
+    sort_colors::tests::test();
 }
