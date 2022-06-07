@@ -20,6 +20,7 @@ mod merge_sort;
 mod insertion_sort_list;
 mod sort_colors;
 mod k_largest;
+mod strstr;
 
 fn main() {
     // let root = binary_tree::from_bfs_array(&[Some(1), None, Some(3)]);
@@ -42,5 +43,7 @@ fn main() {
     // merge_sort::tests::test();
     // insertion_sort_list::tests::test();
     // sort_colors::tests::test();
-    k_largest::tests::test();
+    // k_largest::tests::test();
+
+    strstr::tests::test();
 }
