@@ -46,7 +46,7 @@ impl Solution {
 }
 
 pub mod tests {
-    use crate::binary_search_min_in_rotated::steps_count;
+    use crate::problem_154::steps_count;
 
     use super::Solution;
 
