@@ -23,6 +23,7 @@ mod k_largest;
 mod strstr;
 mod surrounded_regions;
 mod problem_1876;
+mod problem_912;
 
 fn main() {
     // let root = binary_tree::from_bfs_array(&[Some(1), None, Some(3)]);
@@ -48,6 +49,7 @@ fn main() {
     // k_largest::tests::test();
     // strstr::tests::test();
     // surrounded_regions::tests::test();
+    // problem_1876::tests::test();
 
-    problem_1876::tests::test();
+    problem_912::tests::test();
 }
