@@ -16,7 +16,7 @@ impl fmt::Display for ListNode {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match &self.next {
             Some(node) => {
-                write!(f, "{},", self.val);
+                let _ = write!(f, "{},", self.val);
                 node.fmt(f)
             }
             None => write!(f, "{}", self.val),
@@ -49,22 +49,27 @@ pub fn print_list(head: &Option<Box<ListNode>>) {
     }
 }
 
-pub fn test() {
-    let mut head = create_list(&[1, 2, 3]);
+pub mod tests {
+    use super::*;
 
-    let mut curr_node = &mut head;
-    let n = 3;
-    let mut i = 1;
+    #[allow(dead_code)]
+    pub fn test() {
+        let mut head = create_list(&[1, 2, 3]);
 
-    while let Some(node) = curr_node.as_mut() {
-        // while curr_node.is_some() {
-        if i == n {
-            break;
+        let mut curr_node = &mut head;
+        let n = 3;
+        let mut i = 1;
+
+        while let Some(node) = curr_node.as_mut() {
+            // while curr_node.is_some() {
+            if i == n {
+                break;
+            }
+            curr_node = &mut node.next;
+            // curr_node = &mut curr_node.as_mut().unwrap().next;
+            i += 1;
         }
-        curr_node = &mut node.next;
-        // curr_node = &mut curr_node.as_mut().unwrap().next;
-        i += 1;
-    }
 
-    // let head = curr_node.as_mut().unwrap();
+        // let head = curr_node.as_mut().unwrap();
+    }
 }

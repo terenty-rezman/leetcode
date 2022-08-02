@@ -26,7 +26,7 @@ impl Solution {
         let mut reverse_head: Option<Box<ListNode>> = None;
         let mut node = node.take();
         while node.is_some() {
-            let mut next = node.as_mut().unwrap().next.take();
+            let next = node.as_mut().unwrap().next.take();
             let mut new_head = node.take();
             new_head.as_mut().unwrap().next = reverse_head.take();
             reverse_head = new_head;

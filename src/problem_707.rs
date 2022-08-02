@@ -53,6 +53,7 @@ impl MyLinkedList {
         node.replace(Box::new(Node { val, next: None }));
     }
 
+    #[allow(unused)]
     fn add_at_index(&mut self, index: i32, val: i32) {
         let mut node = &mut self.head;
         let mut count = index;
@@ -93,6 +94,7 @@ impl MyLinkedList {
 pub mod tests {
     use super::MyLinkedList;
 
+    #[allow(unused)]
     pub fn test() {
         let mut obj = MyLinkedList::new();
         let index = 0;

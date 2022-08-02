@@ -86,9 +86,10 @@ fn merge(a: &[i32], b: &[i32]) -> Vec<i32> {
 
 pub mod tests {
     use super::Solution;
-    use std::time::{Duration, Instant};
-    use rand::{thread_rng, Rng, Fill};
+    use std::time::{Instant};
+    use rand::{Rng};
 
+    #[allow(unused)]
     pub fn test() {
         let size = 100_000;
         let mut v = vec![i32::default(); size];

@@ -13,6 +13,8 @@ fn guess(x: i32) -> i32 {
 struct Solution;
 
 impl Solution {
+    #[allow(unreachable_code)]
+    #[allow(non_snake_case)]
     fn guessNumber(n: i32) -> i32 {
         let mut l: i64 = -1;
         let mut r: i64 = n as i64 + 1;

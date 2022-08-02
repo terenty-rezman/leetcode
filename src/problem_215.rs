@@ -32,8 +32,6 @@ impl Solution {
 
         let m = i + 1;
 
-        let len = nums.len() as i32;
-
         if k as i32 == m  {
             return nums[k];
         }

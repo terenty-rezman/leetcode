@@ -1,4 +1,4 @@
-use crate::binary_tree::{self, TreeNode};
+use crate::binary_tree::{TreeNode};
 
 struct Solution;
 
@@ -50,7 +50,7 @@ impl Solution {
 
 pub mod tests {
     use super::*;
-    use crate::binary_tree::{self, TreeNode};
+    use crate::binary_tree::{self};
 
     pub fn test() {
         let root = binary_tree::from_bfs_array(&[Some(1), Some(2), Some(3)]);

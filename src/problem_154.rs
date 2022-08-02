@@ -1,19 +1,19 @@
 struct Solution;
 
-static mut steps_count: usize = 0;
+static mut STEPS_COUNT: usize = 0;
 
 impl Solution {
     pub fn find_min(nums: Vec<i32>) -> i32 {
         if nums.len() == 1 {
             unsafe {
-                steps_count += 1;
+                STEPS_COUNT += 1;
             }
             return nums[0];
         }
 
         if nums.len() == 2 {
             unsafe {
-                steps_count += 1;
+                STEPS_COUNT += 1;
             }
             return std::cmp::min(nums[0], nums[1]);
         }
@@ -23,7 +23,7 @@ impl Solution {
 
         while l + 1 < r {
             unsafe {
-                steps_count += 1;
+                STEPS_COUNT += 1;
             }
 
             let m = l + (r - l) / 2;
@@ -46,7 +46,7 @@ impl Solution {
 }
 
 pub mod tests {
-    use crate::problem_154::steps_count;
+    use crate::problem_154::STEPS_COUNT;
 
     use super::Solution;
 
@@ -60,7 +60,7 @@ pub mod tests {
         let result = Solution::find_min(nums);
 
         unsafe {
-            dbg!(steps_count);
+            dbg!(STEPS_COUNT);
         }
 
         dbg!(result);

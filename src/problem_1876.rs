@@ -1,6 +1,4 @@
 use std::collections::HashMap;
-use std::hash::Hash;
-use std::iter::FromIterator;
 use std::u8;
 
 struct Solution;

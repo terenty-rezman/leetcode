@@ -1,20 +1,17 @@
-use core::num;
-
 struct Solution;
 
 impl Solution {
+    #[allow(unused)]
     pub fn search(nums: Vec<i32>, target: i32) -> i32 {
         let mut r = nums.len() - 1;
         let mut l = 0;
-        let mut min_val = 0;
-        let mut min_i = 0;
+        let mut min_i: usize = 0;
 
         loop {
             let m_i = (l + r) / 2;
             let m_val = nums[m_i];
 
             if nums[l] <= m_val && m_val <= nums[r] {
-                min_val = nums[l];
                 min_i = l;
                 break;
             }
@@ -22,10 +19,8 @@ impl Solution {
             if r - l <= 1 {
                 if nums[l] < nums[r] {
                     min_i = l;
-                    min_val = nums[l];
                 } else {
                     min_i = r;
-                    min_val = nums[r];
                 }
                 break;
             }

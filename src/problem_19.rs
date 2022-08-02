@@ -1,5 +1,4 @@
-use std::{mem::replace, pin::Pin};
-
+#![allow(unused)]
 #[derive(Debug)]
 struct ListNode {
     val: i32,
