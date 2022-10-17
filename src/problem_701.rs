@@ -1,4 +1,4 @@
-use crate::binary_tree::{TreeNode};
+use crate::binary_tree::TreeNode;
 
 struct Solution;
 

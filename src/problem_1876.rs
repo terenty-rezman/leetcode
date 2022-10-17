@@ -9,7 +9,9 @@ struct CountMap {
 
 impl CountMap {
     fn new() -> Self {
-        Self { map: HashMap::new() }
+        Self {
+            map: HashMap::new(),
+        }
     }
 
     fn add(&mut self, item: u8) {

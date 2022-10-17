@@ -1,5 +1,5 @@
-use std::collections::HashMap;
 use std::cmp::max;
+use std::collections::HashMap;
 
 struct Solution;
 
@@ -24,7 +24,7 @@ impl Solution {
                 let prev_pos = found.get(&c).unwrap() + 1;
                 if prev_pos > l {
                     l = prev_pos;
-                } 
+                }
             }
 
             found.insert(c, r);
@@ -40,9 +40,18 @@ pub mod tests {
     use super::Solution;
 
     pub fn test() {
-        assert_eq!(Solution::length_of_longest_substring("abcabcbb".to_string()), 3);
-        assert_eq!(Solution::length_of_longest_substring("bbbbb".to_string()), 1);
-        assert_eq!(Solution::length_of_longest_substring("pwwkew".to_string()), 3);
+        assert_eq!(
+            Solution::length_of_longest_substring("abcabcbb".to_string()),
+            3
+        );
+        assert_eq!(
+            Solution::length_of_longest_substring("bbbbb".to_string()),
+            1
+        );
+        assert_eq!(
+            Solution::length_of_longest_substring("pwwkew".to_string()),
+            3
+        );
         assert_eq!(Solution::length_of_longest_substring("abba".to_string()), 2);
     }
 }

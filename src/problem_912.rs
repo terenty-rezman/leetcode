@@ -16,47 +16,46 @@ fn partition(s: &mut [i32]) -> usize {
     let mut j: i32 = -1;
 
     for i in 0..s.len() {
-       if s[i] <= s[s.len() - 1] {
-           j += 1;
-           s.swap(i, j as usize);
-       } 
+        if s[i] <= s[s.len() - 1] {
+            j += 1;
+            s.swap(i, j as usize);
+        }
     }
 
     j as usize
 }
 
-
 fn quick_sort(s: &mut [i32]) {
-   if s.len() <= 1 {
-       return;
-   } 
+    if s.len() <= 1 {
+        return;
+    }
 
-   let p = partition(s);
-   quick_sort(&mut s[..p]);
-   quick_sort(&mut s[p..]);
+    let p = partition(s);
+    quick_sort(&mut s[..p]);
+    quick_sort(&mut s[p..]);
 }
 
 fn merge_sort(nums: &[i32]) -> Vec<i32> {
     if nums.len() <= 1 {
         return nums.to_vec();
     }
-    
+
     let m = nums.len() / 2;
-    
+
     let a = merge_sort(&nums[0..m]);
     let b = merge_sort(&nums[m..nums.len()]);
-    
+
     merge(&a, &b)
 }
 
 fn merge(a: &[i32], b: &[i32]) -> Vec<i32> {
     let mut res = Vec::new();
     res.resize(a.len() + b.len(), 0);
-    
+
     let mut i = 0;
     let mut j = 0;
     let mut k = 0;
-    
+
     while i < a.len() && j < b.len() {
         if a[i] < b[j] {
             res[k] = a[i];
@@ -67,27 +66,26 @@ fn merge(a: &[i32], b: &[i32]) -> Vec<i32> {
         }
         k += 1;
     }
-    
+
     while i < a.len() {
         res[k] = a[i];
         i += 1;
         k += 1;
     }
-    
+
     while j < b.len() {
         res[k] = b[j];
         j += 1;
         k += 1
     }
-    
-    res
-} 
 
+    res
+}
 
 pub mod tests {
     use super::Solution;
-    use std::time::{Instant};
-    use rand::{Rng};
+    use rand::Rng;
+    use std::time::Instant;
 
     #[allow(unused)]
     pub fn test() {

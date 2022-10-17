@@ -5,13 +5,13 @@ impl Solution {
         if needle.is_empty() {
             return 0;
         }
-        
+
         let haystack = haystack.as_bytes();
         let needle = needle.as_bytes();
         let mut match_i = 0;
         let mut j = 0;
         let mut match_len = 0;
-        
+
         while j < haystack.len() {
             if haystack[j] == needle[match_len] {
                 if match_len == 0 {
@@ -24,14 +24,14 @@ impl Solution {
                 }
                 match_len = 0;
             }
-            
+
             if match_len == needle.len() {
                 return (match_i) as i32;
             }
 
             j += 1;
         }
-        
+
         -1
     }
 }

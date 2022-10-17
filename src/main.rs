@@ -1,30 +1,32 @@
 // mod excercism;
-mod problem_374;
-mod problem_154;
-mod problem_367;
-mod problem_50;
 mod binary_search_range;
-mod problem_33;
-mod problem_744;
 mod binary_tree;
-mod problem_297;
-mod problem_701;
-mod problem_173;
-mod problem_19;
-mod problem_707;
-mod my_list;
-mod problem_234;
-mod problem_206;
-mod problem_349;
 mod merge_sort;
-mod problem_147;
-mod problem_75;
-mod problem_215;
-mod problem_28;
+mod my_list;
 mod problem_130;
+mod problem_147;
+mod problem_154;
+mod problem_173;
 mod problem_1876;
-mod problem_912;
+mod problem_19;
+mod problem_206;
+mod problem_215;
+mod problem_234;
+mod problem_28;
+mod problem_297;
 mod problem_3;
+mod problem_33;
+mod problem_349;
+mod problem_367;
+mod problem_374;
+mod problem_50;
+mod problem_54;
+mod problem_55;
+mod problem_701;
+mod problem_707;
+mod problem_744;
+mod problem_75;
+mod problem_912;
 
 fn main() {
     // let root = binary_tree::from_bfs_array(&[Some(1), None, Some(3)]);
@@ -52,6 +54,7 @@ fn main() {
     // problem_130::tests::test();
     // problem_1876::tests::test();
     // problem_912::tests::test();
-
-    problem_3::tests::test();
+    // problem_3::tests::test();
+    // problem_54::tests::test();
+    problem_55::tests::test();
 }
