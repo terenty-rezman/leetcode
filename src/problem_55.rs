@@ -19,8 +19,7 @@ impl Solution {
 
             if Solution::can_jump_impl(&mut nums[jump as usize..]) == true {
                 return true;
-            }
-            else {
+            } else {
                 nums[jump as usize] = 0;
             }
         }
