@@ -11,9 +11,17 @@ impl Solution {
                 let t = i as i32 - 1;
                 let l = j as i32 - 1;
 
-                let t_val = if t < 0 { std::i32::MAX } else { grid[t as usize][j] };
+                let t_val = if t < 0 {
+                    std::i32::MAX
+                } else {
+                    grid[t as usize][j]
+                };
 
-                let l_val = if l < 0 { std::i32::MAX } else { grid[i][l as usize] };
+                let l_val = if l < 0 {
+                    std::i32::MAX
+                } else {
+                    grid[i][l as usize]
+                };
 
                 grid[i][j] += std::cmp::min(l_val, t_val);
             }
@@ -27,11 +35,7 @@ pub mod tests {
     use super::Solution;
 
     pub fn test() {
-        let v = vec![
-            vec![1, 2, 3],
-            vec![1, 2, 3],
-            vec![1, 1, 3]
-        ];
+        let v = vec![vec![1, 2, 3], vec![1, 2, 3], vec![1, 1, 3]];
 
         let res = Solution::min_path_sum(v);
         dbg!(res);
