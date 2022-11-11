@@ -3,6 +3,7 @@ mod binary_search_range;
 mod binary_tree;
 mod merge_sort;
 mod my_list;
+mod problem_124;
 mod problem_130;
 mod problem_147;
 mod problem_154;
@@ -32,8 +33,8 @@ mod problem_744;
 mod problem_75;
 mod problem_76;
 mod problem_79;
-mod problem_912;
 mod problem_91;
+mod problem_912;
 
 fn main() {
     // let root = binary_tree::from_bfs_array(&[Some(1), None, Some(3)]);
@@ -70,5 +71,6 @@ fn main() {
     // problem_76::tests::test();
     // problem_73::tests::test();
     // problem_79::tests::test();
-    problem_91::tests::test();
+    // problem_91::tests::test();
+    problem_124::tests::test();
 }
