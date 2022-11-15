@@ -7,6 +7,7 @@ mod problem_124;
 mod problem_125;
 mod problem_128;
 mod problem_130;
+mod problem_139;
 mod problem_147;
 mod problem_154;
 mod problem_173;
@@ -76,5 +77,6 @@ fn main() {
     // problem_91::tests::test();
     // problem_124::tests::test();
     // problem_125::tests::test();
-    problem_128::tests::test();
+    // problem_128::tests::test();
+    problem_139::tests::test();
 }
