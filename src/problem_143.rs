@@ -33,9 +33,9 @@ impl Solution {
         let mut reversed_second_half = None;
         while second_half.is_some() {
             let temp_next = second_half.as_mut().unwrap().next.take();
-            second_half.as_mut().unwrap().next = reversed_second_half.take(); 
+            second_half.as_mut().unwrap().next = reversed_second_half.take();
             reversed_second_half = second_half.take();
-            second_half = temp_next; 
+            second_half = temp_next;
         }
 
         second_half = reversed_second_half;
