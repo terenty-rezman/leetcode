@@ -59,7 +59,7 @@ pub mod tests {
     use super::Solution;
 
     pub fn test() {
-        let r = Solution::can_finish(2, vec![vec![1,4],vec![2,4],vec![3,1],vec![3,2]]);
+        let r = Solution::can_finish(2, vec![vec![1, 4], vec![2, 4], vec![3, 1], vec![3, 2]]);
         dbg!(r);
     }
 }
