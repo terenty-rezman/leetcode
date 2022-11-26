@@ -24,7 +24,7 @@ impl TrieNode {
 impl Trie {
     fn new() -> Self {
         Trie {
-            data: TrieNode::new()
+            data: TrieNode::new(),
         }
     }
 
@@ -61,7 +61,7 @@ impl Trie {
         false
     }
 
-    fn starts_with(&self, prefix: String) -> bool { 
+    fn starts_with(&self, prefix: String) -> bool {
         if prefix.is_empty() {
             return true;
         }

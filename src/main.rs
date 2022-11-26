@@ -19,6 +19,7 @@ mod problem_190;
 mod problem_206;
 mod problem_207;
 mod problem_208;
+mod problem_211;
 mod problem_215;
 mod problem_234;
 mod problem_263;
@@ -90,5 +91,6 @@ fn main() {
     // problem_190::tests::test();
     // problem_263::tests::test();
     // problem_207::tests::test();
-    problem_208::tests::test();
+    // problem_208::tests::test();
+    problem_211::tests::test();
 }
