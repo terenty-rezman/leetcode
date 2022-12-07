@@ -69,7 +69,7 @@ pub mod tests {
         let obj = Codec::new();
         let data: String = obj.serialize(root);
         let ans: Option<Rc<RefCell<TreeNode>>> = obj.deserialize(data);
-        dbg!(binary_tree::print_level_order(&ans));
+        dbg!(binary_tree::to_level_order(&ans));
         // dbg!(ans);
     }
 }

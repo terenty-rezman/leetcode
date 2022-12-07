@@ -121,13 +121,7 @@ pub mod tests {
             vec!['a', 'h', 'k', 'r'],
             vec!['a', 'f', 'l', 'v'],
         ];
-        let r = Solution::find_words(
-            board,
-            vec![
-                "oa".to_owned(),
-                "oaa".to_owned()
-            ],
-        );
+        let r = Solution::find_words(board, vec!["oa".to_owned(), "oaa".to_owned()]);
         dbg!(r);
     }
 }

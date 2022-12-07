@@ -57,7 +57,7 @@ pub fn from_bfs_array(array: &[Option<i32>]) -> Option<Rc<RefCell<TreeNode>>> {
     root
 }
 
-pub fn print_level_order(root: &Option<Rc<RefCell<TreeNode>>>) -> Vec<Option<i32>> {
+pub fn to_level_order(root: &Option<Rc<RefCell<TreeNode>>>) -> Vec<Option<i32>> {
     let mut result = vec![];
     let mut to_process = VecDeque::new();
     to_process.push_back(root.clone());

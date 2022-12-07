@@ -5,20 +5,20 @@ impl Solution {
         if nums.len() <= 3 {
             return nums.into_iter().reduce(std::cmp::max).unwrap_or(0);
         }
-        
+
         fn max_rob(nums: &[i32]) -> i32 {
             let mut max_3 = nums[0];
             let mut max_2 = nums[1];
             let mut max_1 = nums[2] + nums[0];
-            
+
             for i in 3..nums.len() {
                 let max_cur = nums[i] + std::cmp::max(max_3, max_2);
-                
+
                 max_3 = max_2;
                 max_2 = max_1;
                 max_1 = max_cur;
             }
-            
+
             std::cmp::max(max_1, max_2)
         }
 
@@ -43,8 +43,7 @@ pub mod tests {
     use super::Solution;
 
     pub fn test() {
-        let r = Solution::rob(vec![4,1,2,7,5,3,1]);
+        let r = Solution::rob(vec![4, 1, 2, 7, 5, 3, 1]);
         dbg!(r);
     }
 }
-

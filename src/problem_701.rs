@@ -56,6 +56,6 @@ pub mod tests {
         let root = binary_tree::from_bfs_array(&[Some(1), Some(2), Some(3)]);
 
         let root = Solution::insert_into_bst(root, 4);
-        dbg!(binary_tree::print_level_order(&root));
+        dbg!(binary_tree::to_level_order(&root));
     }
 }
