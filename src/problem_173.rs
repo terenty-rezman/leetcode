@@ -58,7 +58,7 @@ pub mod tests {
     use crate::binary_tree;
 
     pub fn test() {
-        let root = binary_tree::from_bfs_array(&[Some(1), Some(2), Some(3)]);
+        let root = binary_tree::from_level_order(&[Some(1), Some(2), Some(3)]);
         let mut iter = BSTIterator::new(root);
 
         while iter.has_next() {

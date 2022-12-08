@@ -30,10 +30,10 @@ impl Solution {
 
 pub mod tests {
     use super::Solution;
-    use crate::binary_tree::{from_bfs_array, to_level_order};
+    use crate::binary_tree::{from_level_order, to_level_order};
 
     pub fn test() {
-        let r = Solution::invert_tree(from_bfs_array(&[
+        let r = Solution::invert_tree(from_level_order(&[
             Some(1),
             Some(2),
             Some(3)

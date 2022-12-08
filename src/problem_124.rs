@@ -35,10 +35,10 @@ impl Solution {
 
 pub mod tests {
     use super::Solution;
-    use crate::binary_tree::from_bfs_array;
+    use crate::binary_tree::from_level_order;
 
     pub fn test() {
-        let tree = from_bfs_array(&[Some(2), Some(-1), Some(-2)]);
+        let tree = from_level_order(&[Some(2), Some(-1), Some(-2)]);
         let r = Solution::max_path_sum(tree);
         dbg!(r);
     }

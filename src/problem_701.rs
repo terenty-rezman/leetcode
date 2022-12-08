@@ -53,7 +53,7 @@ pub mod tests {
     use crate::binary_tree::{self};
 
     pub fn test() {
-        let root = binary_tree::from_bfs_array(&[Some(1), Some(2), Some(3)]);
+        let root = binary_tree::from_level_order(&[Some(1), Some(2), Some(3)]);
 
         let root = Solution::insert_into_bst(root, 4);
         dbg!(binary_tree::to_level_order(&root));

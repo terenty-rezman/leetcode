@@ -20,7 +20,7 @@ impl TreeNode {
     }
 }
 
-pub fn from_bfs_array(array: &[Option<i32>]) -> Option<Rc<RefCell<TreeNode>>> {
+pub fn from_level_order(array: &[Option<i32>]) -> Option<Rc<RefCell<TreeNode>>> {
     let mut values = VecDeque::from(array.to_vec());
     let mut root: Option<Rc<RefCell<TreeNode>>> = None;
 
