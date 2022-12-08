@@ -1,5 +1,3 @@
-// mod excercism;
-mod binary_search_range;
 mod binary_tree;
 mod merge_sort;
 mod my_list;
@@ -25,6 +23,7 @@ mod problem_213;
 mod problem_215;
 mod problem_226;
 mod problem_234;
+mod problem_235;
 mod problem_263;
 mod problem_28;
 mod problem_297;
@@ -98,5 +97,6 @@ fn main() {
     // problem_211::tests::test();
     // problem_212::tests::test();
     // problem_213::tests::test();
-    problem_226::tests::test();
+    // problem_226::tests::test();
+    problem_235::tests::test();
 }

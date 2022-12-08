@@ -33,12 +33,8 @@ pub mod tests {
     use crate::binary_tree::{from_level_order, to_level_order};
 
     pub fn test() {
-        let r = Solution::invert_tree(from_level_order(&[
-            Some(1),
-            Some(2),
-            Some(3)
-        ]));
-        let r  = to_level_order(&r);
+        let r = Solution::invert_tree(from_level_order(&[Some(1), Some(2), Some(3)]));
+        let r = to_level_order(&r);
         dbg!(r);
     }
 }
