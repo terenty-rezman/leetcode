@@ -48,6 +48,7 @@ mod problem_79;
 mod problem_91;
 mod problem_912;
 mod problem_300;
+mod problem_290;
 
 fn main() {
     // let root = binary_tree::from_bfs_array(&[Some(1), None, Some(3)]);
@@ -100,5 +101,6 @@ fn main() {
     // problem_213::tests::test();
     // problem_226::tests::test();
     // problem_235::tests::test();
-    problem_300::tests::test();
+    // problem_300::tests::test();
+    problem_290::tests::test();
 }
