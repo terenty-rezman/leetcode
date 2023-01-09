@@ -3,7 +3,7 @@ use std::collections::{HashMap, HashSet};
 
 impl Solution {
     pub fn word_pattern(pattern: String, s: String) -> bool {
-        let mut map: HashMap<char, &str>  = HashMap::new();
+        let mut map: HashMap<char, &str> = HashMap::new();
         let mut already_mapped: HashSet<&str> = HashSet::new();
         let mut chars = pattern.chars().peekable();
         let mut words = s.split_whitespace().peekable();
